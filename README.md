@@ -10,6 +10,7 @@ Compile and run unit tests:
 
     $ sbt compile test
     
+## Usage
 Execute program with provided inputs:
 
     $ sbt run
