@@ -29,8 +29,43 @@ object Main extends App {
   val P4 = Promotion("P4", Seq("P2"))
   val P5 = Promotion("P5", Seq("P2"))
 
-  println(getBestGroupPrices(Rates, CabinPrices))
-  println(allCombinablePromotions(Seq(P1, P2, P3, P4, P5)))
-  println(combinablePromotions("P1", Seq(P1, P2, P3, P4, P5)))
-  println(combinablePromotions("P3", Seq(P1, P2, P3, P4, P5)))
+  val Promotions = Seq(P1, P2, P3, P4, P5)
+
+  println(s"""
+getBestGroupPrices(
+  rates = $Rates,
+  cabinPrices = $CabinPrices,
+)
+// =>
+    """)
+  println(getBestGroupPrices(Rates, CabinPrices).mkString("\n"))
+  println
+
+  println(s"""
+allCombinablePromotions(
+  promotions = $Promotions
+)
+// =>
+    """)
+  println(allCombinablePromotions(Promotions).mkString("\n"))
+  println
+
+  println(s"""
+combinablePromotions(
+  promotionCode = "P1"
+  promotions = $Promotions
+)
+// =>
+    """)
+  println(combinablePromotions("P1", Seq(P1, P2, P3, P4, P5)).mkString("\n"))
+  println
+
+  println(s"""
+combinablePromotions(
+  promotionCode = "P3"
+  promotions = $Promotions
+)
+// =>
+    """)
+  println(combinablePromotions("P3", Seq(P1, P2, P3, P4, P5)).mkString("\n"))
 }
