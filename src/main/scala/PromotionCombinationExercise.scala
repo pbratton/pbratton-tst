@@ -32,7 +32,7 @@ case class PromotionCombo(promotionCodes: Seq[String]) {
     if(incompatible.size > 0)
       Seq(this, PromotionCombo(compatible ++ Seq(promotion.code))).filter(_.promotionCodes.size > 0)
     else
-      Seq(PromotionCombo(compatible ++ Seq(promotion.code))).filter(_.promotionCodes.size > 0)
+      Seq(PromotionCombo(compatible ++ Seq(promotion.code)))
   }
 
   /**
