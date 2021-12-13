@@ -1,5 +1,5 @@
 # TST Interview 
-Coding exercise for TST
+Solution for TST Interview coding take-home exercise.
 
 ## Building
 Install [sbt](https://www.scala-sbt.org/1.x/docs/) 
